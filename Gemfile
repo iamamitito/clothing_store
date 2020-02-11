@@ -6,7 +6,7 @@ ruby '2.6.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+gem 'sqlite3', '~> 1.4', group: :development
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -22,6 +22,7 @@ gem 'devise'
 # gem 'redis', '~> 4.0'
 gem 'faker'
 
+gem 'pg', group: :production
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
