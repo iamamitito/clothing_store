@@ -1,2 +1,8 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<p><%= image_tag @product.photo %></p>
+<h3><%= @product.name %></h3>
+<p>CLP <%= @product.price %></p>
+<%= link_to product_orders_path(@product), method: :post do %>
+<i class="fas fa-cart-plus fa-2x"></i>
+<% end %>
+
+<%= link_to "BACK", products_path %>
