@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <% @products.each_slice(12) do |row| %>
+      <% row.each do |product| %>
+        <div class="col">
+          <div class="card clothes-card">
+            <%= image_tag product.photo, class: 'card-img-top' %>
+            <div class="card-body clothes-body">
+            <%= link_to "#{product.name}", product, class: 'btn card-btn' %>
+              <p>CLP <%= product.price %> </p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <div class="w-100" style="margin-top:20px;"></div>
+    <% end %>
+  </div>
+</div>

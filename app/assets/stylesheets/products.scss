@@ -1,0 +1,50 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "variables";
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: $font;
+    
+}
+nav  {
+    .user-name {
+    border-right: 1px solid rgb(214, 214, 214);
+    }
+}
+
+.clothes-card {
+    border: none;
+    img {
+        max-width: 290px;
+        max-height: 434px;
+        min-width: 290px;
+        min-height: 434px;
+    }
+}
+.clothes-body {
+    padding: 0;
+    p {
+        text-align: left;
+    }
+}
+.card-btn {
+    color: rgb(15, 15, 15);
+    padding: 0;
+}
+.card-btn:hover {
+    color:black;
+    border-bottom: 0.5px solid black;
+}
+.clothes-nav a {
+    text-decoration: none;
+    color: rgb(15, 15, 15);
+
+}
+.clothes-nav:hover {
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+.main-content{
+    margin-top: 80px;
+  }
