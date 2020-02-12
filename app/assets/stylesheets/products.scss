@@ -8,9 +8,13 @@ body {
     
 }
 nav  {
-    .user-name {
+    .navbar-link {
     border-right: 1px solid rgb(214, 214, 214);
     }
+     
+}
+.main-content {
+    margin-top: 90px;
 }
 
 .clothes-card {
@@ -36,15 +40,24 @@ nav  {
     color:black;
     border-bottom: 0.5px solid black;
 }
-.clothes-nav a {
+.clothes-nav a, .products-show a {
     text-decoration: none;
-    color: rgb(15, 15, 15);
+    color: rgb(10, 10, 10);
 
 }
 .clothes-nav:hover {
     background-color: rgb(255, 255, 255);
     transition: 0.3s;
 }
-.main-content{
-    margin-top: 80px;
-  }
+.btn-session {
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 0;
+}
+.btn-session:hover {
+    color: rgb(167, 167, 167);
+    border: 1px solid rgb(167, 167, 167);
+    
+}
+.add-to-car:hover {
+    color:rgb(231, 133, 5);
+}

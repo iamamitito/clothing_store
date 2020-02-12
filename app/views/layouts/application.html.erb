@@ -6,16 +6,18 @@
     <%= csp_meta_tag %>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <%= favicon_link_tag asset_path('shirt.png') %>
   </head>
 
   <body>
     <nav class="navbar navbar-expand-lg clothes-nav fixed-top">
-      <a class="navbar-brand" href="<%= root_path %>"><i class="fas fa-tshirt fa-2x ">STORE</i></a>
+      <a class="navbar-brand" href="<%= root_path %>"><i class="fas fa-tshirt fa-3x ">STORE</i></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -23,20 +25,20 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="<%= orders_path %>"><i class="fas fa-cart-plus fa-lg"></i><span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<%= orders_path %>"><i class="fas fa-cart-plus fa-2x"></i><span class="sr-only">(current)</span></a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">
           
             <% if !user_signed_in? %>
-              <li class="nav-item">
+              <li class="nav-item navbar-link">
               <%= link_to 'Iniciar sesión', new_user_session_path, class: 'nav-link' %>
               </li>
               <li class="nav-item">
               <%= link_to 'Registrarse',  new_user_registration_path, class: 'nav-link'%>
               </li>
             <% else %>
-            <li class="nav-item user-name">
+            <li class="nav-item navbar-link">
               <a class="nav-link"><%= current_user.email.upcase %></a>
             </li>
             <li class="nav-item">
@@ -47,6 +49,7 @@
         </ul>
       </div>
     </nav>
+    <br>
     <br>
     <% if alert.present? %>
       <div class="myAlert-top alert mt-5 alert-danger">
