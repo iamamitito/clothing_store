@@ -62,9 +62,10 @@ nav  {
 .add-to-car:hover {
     color:rgb(231, 133, 5);
 }
-@media only screen and (max-width: 1030px) {
+
+@media only screen and (max-width: 980px) {
     body a, p{
-        font-size: 1.5rem;
+        font-size: 2.6rem;
     }
 }
 
