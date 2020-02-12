@@ -6,7 +6,7 @@
           <div class="card clothes-card">
             <%= image_tag product.photo, class: 'card-img-top' %>
             <div class="card-body clothes-body">
-            <%= link_to "#{product.name}", product, class: 'btn card-btn' %>
+            <h5><%= link_to "#{product.name}", product, class: 'card-btn' %></h5>
               <p>CLP <%= product.price %> </p>
             </div>
           </div>
