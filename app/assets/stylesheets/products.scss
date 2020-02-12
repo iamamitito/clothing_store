@@ -17,16 +17,14 @@ nav  {
      
 }
 .main-content {
-    margin-top: 90px;
+    margin-top: 90px;    
 }
 
 .clothes-card {
     border: none;
     img {
-        max-width: 290px;
-        max-height: 434px;
-        min-width: 290px;
-        min-height: 434px;
+        min-width: 350px;
+        min-height: 500px;
     }
     
 }
@@ -66,6 +64,7 @@ nav  {
 }
 @media only screen and (max-width: 1030px) {
     body a, p{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
+
