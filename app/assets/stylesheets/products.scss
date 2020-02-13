@@ -13,20 +13,22 @@ nav  {
     }
     #hamburger {
         outline: none;
+    } 
+    .nav-item {
+        padding: 10px;
+        margin: 10px;
+
     }
-     
 }
 .main-content {
-    margin-top: 90px;    
+    margin-top: 70px;    
 }
-
 .clothes-card {
     border: none;
     img {
         min-width: 350px;
         min-height: 500px;
-    }
-    
+    }   
 }
 .clothes-body {
     padding: 0;
@@ -59,17 +61,25 @@ nav  {
     border: 1px solid rgb(167, 167, 167);
     
 }
-
+.add-to-car {
+    background-color: rgb(15, 15, 15);
+    color: rgb(255, 255, 255);
+}
 .add-to-car:hover {
-    color:rgb(231, 133, 5);
+    background-color: rgb(250, 183, 0);
 }
 .total-payment {
     font-size: 1.3rem;
 }
-
+#cardimage {
+    width:100%;
+}
 @media only screen and (max-width: 980px) {
-    body a, p{
-        font-size: 2.6rem;
+    body a, p, h5{
+        font-size: 2.4rem;
+    }
+    .nav-item {
+        border-top: 1.5px solid rgb(223, 223, 223);
     }
 }
 

@@ -16,39 +16,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg clothes-nav fixed-top">
-      <a class="navbar-brand" href="<%= root_path %>"><i class="fas fa-tshirt fa-3x ">STORE</i></a>
-      <button id="hamburger"class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"><i class="fas fa-bars fa-2x"></i></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link mycar" href="<%= orders_path %>">My car<i class="fas fa-cart-plus fa-lg"></i><span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-          
-            <% if !user_signed_in? %>
-              <li class="nav-item navbar-link">
-              <%= link_to 'Iniciar sesión', new_user_session_path, class: 'nav-link' %>
-              </li>
-              <li class="nav-item">
-              <%= link_to 'Registrarse',  new_user_registration_path, class: 'nav-link'%>
-              </li>
-            <% else %>
-            <li class="nav-item navbar-link">
-              <a class="nav-link"><%= current_user.email.upcase %></a>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'salir'.upcase, destroy_user_session_path, method: :delete, class: 'nav-link' %>
-            <% end %>
-            </li>
-            
-        </ul>
-      </div>
-    </nav>
+    <%= render 'shared/navbar' %>
     <br>
     <br>
     <% if alert.present? %>
@@ -63,10 +31,9 @@
       <%= notice %>
     </div>
     <% end %>
-
     <div class="main-content">
       <%= yield %>
     </div>
-
+        <%= render 'shared/footer' %>
   </body>
 </html>
