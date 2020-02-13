@@ -18,16 +18,16 @@
           <td> <%= order.price * order.quantity %></td>
         </tr>
       <% end %>
-      <tr class="table-dark">
+      <tr class="total-payment">
       <td></td>
       <td></td>
       <td><strong>Total de la compra:</strong></td>
-      <td><strong><%= @total %></strong></td>
+      <td class="total"><strong><%= @total %></strong></td>
       </tr>
     </tbody>
   </table>
 
-  <%= link_to 'Limpiar carro', clean_orders_path, class: 'btn btn-outline-danger'  %>
+  <%= link_to 'Limpiar carro', clean_orders_path, class: 'btn btn-danger'  %>
   
   <% else %>
     <p>No tienes productos en tu carro de compra.</p>

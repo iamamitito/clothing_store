@@ -7,9 +7,9 @@
     <div class="card-body">
         <h5 class="card-title"><%= @product.name %></h5>
         <p>CLP <%= @product.price %></p>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text">Breve descripción del articulo de vestuario de Clothing Store.</p>
         <%= link_to product_orders_path(@product), method: :post do %>
-        <i class=" add-to-car fas fa-cart-plus fa-2x"></i>
+        <p class="add-to-car">Add to car<i class="  fas fa-cart-plus fa-lg"></i></p>
         <% end %>
     </div>
     </div>
